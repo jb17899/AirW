@@ -1,0 +1,9 @@
+<%-include("header.ejs")%>
+<h1>Share Your Stories,<%= login %></h1>
+<form action="/submitstory" method="POST">
+  <input name="name" type="text" class="feedback-input" placeholder="Name"style="color: black;" />
+  <input name="email" type="text" class="feedback-input" placeholder="Email" style="color:black"/>
+  <textarea name="text" class="feedback-input" placeholder="Story" style="color: black;"></textarea>
+  <input type="submit" value="SUBMIT" />
+</form>
+<%-include("footer.ejs")%>

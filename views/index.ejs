@@ -1,0 +1,256 @@
+<%-include('header.ejs')%>
+<body class="bg-body-tertiary">
+        <section class="search-box">
+        <div class="container d-flex flex-column align-items-center" style="gap:-20px">
+          <img src="ns.png" alt="ss" height="140px" width="140px">
+        <div class="search w-75">
+            <form class="d-flex" role="search" action="/search" method="POST">
+                <input class="form-control me-2" type="search" placeholder="<%= locals.error ? error :  'Search'%>" aria-label="Search" name="searched_item">
+                <button class="btn btn-outline-success w-25" type="submit">Search</button>
+              </form>
+        </div>
+      </div>
+    </section>
+    <section class="main-body mt-5 p-0 nsp">
+        <div class="flex-items">
+            <div class="d-flex flex-wrap" style="gap:20px ">
+                <a href="#condos" class="one ps-4 pe-4 pt-2 pb-2 active" id="s" onclick="condos()" >Condo</a>
+                <a href="#apartment" class="one ps-3 pe-3 pt-2 pb-2" id="s_one"  onclick="apartment()">Apartment</a>
+                <a href="#villa" class="one ps-4 pe-4 pt-2 pb-2" id="s_two" onclick="villa()">Villa</a>
+            </div>
+        </div>
+        <section class="condos" id="condos">
+        <div class="cards mt-5 grid gap-3">
+            <div class="row-one d-flex" style="gap:25px">
+                <div class="card" style="width: 18rem;">
+                    <img src="apartment-condo-condominium-design-wallpaper-preview.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">New York,USA</h5>
+                      <p class="card-text">You'll be captivated by the sleek, contemporary design and the floor-to-ceiling windows that frame breathtaking views of the iconic New York City skyline.</p>
+                    </div>
+                    <ul class="list-group list-group-flush" style="list-style: none;">
+                      <li class="list-group-item">$600/day</li>
+                      <li class="list-group-item">Available Immediately</li>
+                
+                     <li> <form action="/checkout" method="post" class="mt-0">
+                      <a href="" class="card-link" type="submit" style="background-color: transparent;color:#3586ff;text-decoration: none;">Rent Now</a></form>
+                    </li>    </ul>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                      <img src="apartment-condo-design-home-wallpaper-preview (1).jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">California,USA</h5>
+                        <p class="card-text">Step inside to discover an open-concept living space flooded with natural light and adorned with contemporary finishes.</p>
+                      </div>
+                      <ul class="list-group list-group-flush" style="list-style: none;">
+                        <li class="list-group-item">$800/day</li>
+                        <li class="list-group-item">Available Immediately</li>
+                  
+                       <li> <form action="/checkout" method="post" class="mt-0">
+                        <a href="" class="card-link" type="submit" style="background-color: transparent;color:#3586ff;text-decoration: none;">Buy Now</a></form>
+                      </li>    </ul>
+                      </div>
+                      <div class="card" style="width: 18rem;">
+                        <img src="interior-design-room-house-home-apartment-condo-190-wallpaper-preview.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Florida,USA</h5>
+                          <p class="card-text"> From beachfront properties with stunning views to urban condos with resort-style amenities, Florida has something to suit every taste and lifestyle.
+
+                          </p>
+                        </div>
+                        <ul class="list-group list-group-flush" style="list-style: none;">
+                          <li class="list-group-item">$1200/day</li>
+                          <li class="list-group-item">Available Now</li>
+                    
+                         <li> <form action="/checkout" method="post" class="mt-0">
+                          <a href="" class="card-link" type="submit" style="background-color: transparent;color:#3586ff;text-decoration: none;">Rent Now</a></form>
+                        </li>    </ul>
+                        </div>
+                  <div class="card" style="width: 18rem;">
+                    <img src="empty-room.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Las Vegas,USA</h5>
+                      <p class="card-text">Whether you're captivated by the electric energy of the Las Vegas Strip, prefer the tranquility of suburban neighborhoods, or seek the convenience of urban living, Las Vegas has it all.</p>
+                    </div>
+                    <ul class="list-group list-group-flush" style="list-style: none;">
+                      <li class="list-group-item">$1300/day</li>
+                      <li class="list-group-item">Available for four days</li>
+                    
+                      <li> <form action="/checkout" method="post" class="mt-0">
+                        <a href="" class="card-link" type="submit" style="background-color: transparent;color:#3586ff;text-decoration: none;">Buy Now</a></form>
+                      </li>    </ul>
+           
+                    </div>
+            </div>
+            <div class="row-two d-flex" style="gap:25px">
+                <div class="card" style="width: 18rem;">
+                    <img src="apartment-ceiling-chairs-condo.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Washington DC,USA</h5>
+                      <p class="card-text">Whether you're drawn to the iconic landmarks, the bustling city atmosphere, or the leafy neighborhoods, there's a condo to suit your lifestyle.</p>
+                    </div>
+                    <ul class="list-group list-group-flush" style="list-style: none;">
+                      <li class="list-group-item">$500/day</li>
+                      <li class="list-group-item">Available Immediatly</li>
+                      <li> <form action="/checkout" method="post" class="mt-0">
+                        <a href="" class="card-link" type="submit" style="background-color: transparent;color:#3586ff;text-decoration: none;">Buy Now</a></form>
+                      </li>    </ul>
+                  </div>
+                  <div class="card" style="width: 18rem;">
+                    <img src="274-apartment-condo-design-wallpaper-preview.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Miami,USA</h5>
+                      <p class="card-text">From the iconic skyline of Brickell to the trendy vibes of South Beach, Miami offers diverse neighborhoods to suit every taste....</p>
+                    </div>
+                    <ul class="list-group list-group-flush" style="list-style: none;">
+                      <li class="list-group-item">$500/day</li>
+                      <li class="list-group-item">Available Immediatly</li>
+                      <li> <form action="/checkout" method="post" class="mt-0">
+                        <a href="" class="card-link" type="submit" style="background-color: transparent;color:#3586ff;text-decoration: none;">Buy Now</a></form>
+                      </li>    </ul>
+                  </div>
+      </div>
+    </section>
+    <section class="apartment remove" id="apartment">
+      <div class="cards mt-5 grid gap-3">
+          <div class="row-one d-flex" style="gap:25px">
+              <div class="card" style="width: 18rem;">
+                  <img src="apartment-condo-condominium-design-wallpaper-preview.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                  </ul>
+                  <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                  <img src="apartment-condo-design-home-wallpaper-preview (1).jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                  </ul>
+                  <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                  <img src="interior-design-room-house-home-apartment-condo-190-wallpaper-preview.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                  </ul>
+                  <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                  <img src="empty-room.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                  </ul>
+                  <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                  </div>
+                </div>
+          </div>
+  </section>
+  <section class="villas remove" id="villa">
+    <div class="cards mt-5 grid gap-3">
+        <div class="row-one d-flex" style="gap:25px">
+            <div class="card" style="width: 18rem;">
+                <img src="apartment-condo-condominium-design-wallpaper-preview.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="apartment-condo-design-home-wallpaper-preview (1).jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="interior-design-room-house-home-apartment-condo-190-wallpaper-preview.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="empty-room.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+        </div>
+      
+</section>
+    </section>
+<div class="extra-spacer container" style="height:100px"></div>
+</body>
+<%-include("footer.ejs")%>

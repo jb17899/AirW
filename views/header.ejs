@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="ns.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/styles/layout.css">
+  <link rel="stylesheet" href="/styles/content.css">
+  <title>AirW - Best site for Renting,Buying</title>
+</head>
+<header>
+  <nav class="navbar navbar-expand-custom navbar-mainbg d-flex justify-content-between">
+    <a class="navbar-brand navbar-logo" href="/">AirW</a>
+    <div class="cl">
+    <button class="navbar-toggler" type="button" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <div class="hori-selector">
+          <div class="left"></div>
+
+        </div>
+        <%if(locals.login){%>
+        <li class="nav-item">
+          <a class="nav-link" href="/"><i class='bx bxs-home-alt-2'></i>Home</a>
+        </li>
+        <%if(occ == 'renter'){%>
+        <li class="nav-item">
+          <a class="nav-link" href="/identify"><i class='bx bxs-file-find'></i>Identify</a>
+        </li>
+        <%}else{%>
+        <li class="nav-item">
+            <a class="nav-link mr-2" href="/contact"><i class='bx bxs-calendar' ></i>Profile</a>         
+        </li>
+        <%}%>
+        <%} else{%>
+          <li class="nav-item">
+          <button type="button" class="btn btn-outline-light me-5" href="/login" onclick="go()"  style="margin-top: 3px;">Log In</button>
+        </li>
+        <%}%>
+        </ul>
+    </div>
+  </div>
+  </nav> 
+</header>
+<main class="container">

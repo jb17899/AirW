@@ -1,0 +1,21 @@
+<%-include("header.ejs")%>
+<div class="container">
+    <h1>Closest To your Specifications</h1>
+    <div class="container d-flex justify-content-center mt-5" style="gap:20px">
+      <%items.forEach(element => {%>
+        <div class="card" style="width: 18rem;">
+            <img src="apartment-ceiling-chairs-condo.jpg" class="card-img-top" alt="...">
+            <div class="card-body">            
+              <h5 class="card-title"><%=element.name%>,USA</h5>
+              <p class="card-text"><%=element.text%></p></div>
+            <ul class="list-group list-group-flush" style="list-style: none;">
+              <li class="list-group-item">$<%=element.price%>/day</li>
+              <li class="list-group-item">Available Immediatly</li>
+              <li>
+                <a href="" class="card-link" type="submit" style="background-color: transparent;color:#3586ff;text-decoration: none;">Buy Now</a>
+              </li>    </ul>
+          </div>
+          <%});%>
+        </div>
+</div>
+<%-include("footer.ejs")%>

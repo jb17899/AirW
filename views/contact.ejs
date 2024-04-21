@@ -1,0 +1,15 @@
+<%- include("header.ejs") %>
+<%if(user == "owner"){%>
+<div class="container col-md-8">
+  <h1>Please fill out details of your home,Here.</h1>
+
+<form action="/homepricing" method="POST">
+  <input name="location" type="text" class="feedback-input" placeholder="Location"style="color: black;" />
+  <input name="price" type="number" class="feedback-input" placeholder="Price" style="color:black"/>
+  <textarea name="text" class="feedback-input" placeholder="Anything You would like to say about loacation" style="color: black;"></textarea>
+  <div class="col-md-2">
+    <input name="availability" type="number" class="feedback-input" placeholder="availaibility After _______days" style="color:black"/>  
+  </div>
+  <input type="submit" value="Put up the request" /></div>
+<%}%>
+<%- include("footer.ejs") %>
